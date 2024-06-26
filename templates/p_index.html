@@ -1,0 +1,48 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_index_styles.css">
+{% endblock %}
+{% block title %}
+    Main Page
+{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="no_info_message">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% if appointments_count == 0 %}
+        <p class="no_info_message">You don't have any upcoming appointments!</p>
+    {% else %}
+        <div class="content_container">
+            <p class="content_header">Your Upcoming Appointments</p>
+            <div class="content">
+                <div class="left_bar"></div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Doctor</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        {% for i in range(appointments_count) %}
+                            <tr>
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>{{ doctors_list[i].first_name }} {{ doctors_list[i].last_name }}</td>
+                                <td>{{ time_slots_list[i].date }}</td>
+                                <td>{{ time_slots_list[i].start_time }} - {{ time_slots_list[i].end_time }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

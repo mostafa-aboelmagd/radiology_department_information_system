@@ -1,0 +1,78 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_view_medical_file_styles.css">
+{% endblock %}
+{% block title %}
+    View Medical File
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <div class="content">
+            <div class="left_bar"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Scans
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Findings</th>
+                                        <th scope="col">Scan Images</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    {% for i in range(scans_count) %}
+                                        <tr>
+                                            <th scope="row">{{ scans[i].id }}</th>
+                                            <td>{{ scans[i].findings }}</td>
+                                            <td>{{ scans[i].scan_images }}</td>
+                                            <td>{{ scans[i].date }}</td>
+                                            <td>{{ scans[i].cost }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Attending Doctors
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Birth Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    {% for i in range(doctors_count) %}
+                                        <tr>
+                                            <th scope="row">{{ doctors[i].id }}</th>
+                                            <td>{{ doctors[i].first_name }} {{ doctors[i].last_name }}</td>
+                                            <td>{{ doctors[i].birth_date }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

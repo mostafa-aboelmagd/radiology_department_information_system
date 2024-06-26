@@ -1,0 +1,28 @@
+{% extends "a_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/a_index_styles.css">
+{% endblock %}
+{% block title %}
+    Main Page
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <p class="content_header">Status</p>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <p>{{ doctors_num }}</p>
+                    <p>Doctors</p>
+                </div>
+                <div class="col">
+                    <p>{{ patients_num }}</p>
+                    <p>Patients</p>
+                </div>
+                <div class="col">
+                    <p>{{ contact_forms_num }}</p>
+                    <p>Contact Forms Submitted</p>
+                </div>
+            </div>
+        </div>              
+    </div>
+{% endblock %}

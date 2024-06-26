@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/a_edit_profile_styles.css">
+        <title>Edit Profile</title>
+    </head>
+    <body>
+        <div class="container rounded bg-white mt-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="p-3 py-5">
+                        <h6 class="home_message"><a href="/a_index">Back to home</a></h6>
+                        <form action="/a_edit_profile" method="post">
+                            <div class="row mt-3">
+                                <div class="col-md-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" value="{{user.first_name}}" required></div>
+                                <div class="col-md-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" value="{{user.last_name}}" required></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-8"><input type="email" class="form-control" name="email" placeholder="Email" value="{{user.email}}" required></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><input type="number" class="form-control" name="phone_number" placeholder="Add New Phone number" value=""></div>
+                                <div class="col-md-6">
+                                    <select class="form-select" name="deleted_phone_number">
+                                        <option selected value="N">Choose To Delete A Phone Number</option>
+                                        {% for num in phone_numbers %}
+                                        <option value="{{num}}">{{num}}</option>
+                                        {% endfor %}
+                                        <option value="None">None</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <label for="date">Birth Date</label>
+                                <div>
+                                    <div class="input-group date" id="datepicker">
+                                        <input type="text" name="birth_date" class="form-control" value="{{user.birth_date}}" required>
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6"><input type="text" class="form-control" name="country" placeholder="Country" value="{{user.country}}" required></div>
+                                <div class="col-md-6"><input type="text" class="form-control" name="city" placeholder="City" value="{{user.city}}" required></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-8"><input type="text" class="form-control" name="street" placeholder="Street" value="{{user.street}}" required></div>
+                            </div>
+                            <input type="hidden" name="user_id" value="{{user.id}}">
+                            <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="submit">Save Profile</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#datepicker').datepicker();
+            });
+        </script>
+    </body>
+</html>

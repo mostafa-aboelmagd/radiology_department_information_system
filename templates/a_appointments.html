@@ -1,0 +1,37 @@
+{% extends "a_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/a_index_styles.css">
+{% endblock %}
+{% block title %}
+    Appointments List
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <p class="content_header">Appointments List</p>
+        <div class="content">
+            <div class="left_bar"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Doctor ID</th>
+                        <th scope="col">Patient ID</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in range(appointments_num) %}
+                        <tr>
+                            <th scope="row">{{ appointments_list[i].id}}</th>
+                            <td>{{ time_slots_list[i].doctor_id }}</td>
+                            <td>{{ appointments_list[i].patient_id}}</td>
+                            <td>{{ time_slots_list[i].date }}</td>
+                            <td>{{ time_slots_list[i].start_time }} - {{ time_slots_list[i].end_time }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

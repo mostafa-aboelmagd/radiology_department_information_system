@@ -1,0 +1,25 @@
+.contact_text, .contact_title, .contact_request {
+    margin-bottom: 20px;
+}
+
+.contact_text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.request_container {
+    min-height: 150px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgb(25,147,213);
+}
+
+form button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}

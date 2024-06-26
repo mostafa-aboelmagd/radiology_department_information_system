@@ -1,0 +1,23 @@
+.content_header {
+    margin: 10px;
+}
+
+.col {
+    background-color: rgb(254,254,255);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    min-height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col p {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+tr {
+    text-align: center;
+}

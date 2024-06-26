@@ -1,0 +1,75 @@
+.patient_list {
+    width: 100%;
+}
+
+.patient_item {
+    background-color: #ffffff;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.patient_item .patient_header {
+    margin-bottom: 10px;
+}
+
+.patient_item .patient_header h5 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(25,147,213);
+}
+
+.remove_button {
+    color: rgb(254,254,255);
+    font-weight: bold;
+    min-width: 120px;
+    height: 35px;
+    border-style: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(179, 57, 57);
+}
+
+.remove_button:hover {
+    scale: 1.05;
+    transition: 0.3s ease;
+}
+
+.patient_item .patient_details {
+    margin-bottom: 10px;
+}
+
+.patient_item .patient_details .row {
+    margin-bottom: 15px;
+}
+
+.patient_item .patient_details p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.view_med_file {
+    max-height: 25px;
+}
+
+
+.patient_item .previous_appointments ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.patient_item .previous_appointments ul li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}

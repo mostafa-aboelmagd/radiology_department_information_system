@@ -1,0 +1,27 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_fill_contact_form_styles.css">
+{% endblock %}
+{% block title %}
+    Fill Contact Form
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <div class="content">
+            <div class="left_bar"></div>
+            <div>
+                <p class="contact_text">CONTACT US</p>
+                <form action="/p_fill_contact_form" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control contact_title" name="title" placeholder="Title" required>
+                    </div>
+                    <div class="input-group request_container">
+                        <textarea class="form-control contact_request" name="inquiry" placeholder="Inquiry" required></textarea>
+                    </div>
+                    <input type="hidden" name="user_id" value="{{user.id}}">
+                    <button type="submit" class="button">Submit Form</button>
+                </form>
+            </div>                    
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_profile_styles.css">
+{% endblock %}
+{% block title %}
+    Profile
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <div class="content">
+            <div class="left_bar"></div>
+            <table class="table">
+                <tr>
+                    <th scope="col">First Name</th>
+                    <td>{{ user.first_name }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Last Name</th>
+                    <td>{{ user.last_name }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Email</th>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Phone Numbers</th>
+                    <td>
+                        {% for phone_number in phone_numbers %}
+                            {{ phone_number }}  -- 
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col">Sex</th>
+                    <td>{{ user.sex }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Birth Date</th>
+                    <td>{{ user.birth_date }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Country</th>
+                    <td>{{ user.country }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">City</th>
+                    <td>{{ user.city }}</td>
+                </tr>
+                <tr>
+                    <th scope="col">Street</th>
+                    <td>{{ user.street }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+{% endblock %}

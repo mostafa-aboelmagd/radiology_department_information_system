@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1,2&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/a_styles.css">
+        {% block css_link %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="mcontainer">
+            <div class="sidebar">
+                <div class="logo_section">
+                    <img src="../static/logo.svg" class="icon logo" alt="Dashboard Icon" width="60px" height="60px">
+                    <p class="logo_text">Radiology</p>
+                </div>
+                <div class="user_section">
+                    <div class="sidebar_item">
+                        <img src="../static/home.svg" class="icon" alt="Home Icon" width="25px" height="25px">
+                        <a href="/a_index">Home</a>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../static/profile.svg" class="icon" alt="Profile Icon" width="25px" height="25px">
+                        <a href="/a_profile">Profile</a>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../static/view-list-outline.svg" class="icon" alt="Appointments Icon" width="25px" height="25px">
+                        <a href="/a_appointments">Appointments List</a>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../static/doctor.svg" class="icon" alt="Doctor Icon" width="25px" height="25px">
+                        <a href="/a_doctors">Doctors List</a>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../static/account-injury-outline.svg" class="icon" alt="Patient Icon" width="25px" height="25px">
+                        <a href="/a_patients">Patients List</a>
+                    </div>
+                    <div class="sidebar_item">
+                        <img src="../static/form-select.svg" class="icon" alt="Form Icon" width="25px" height="25px">
+                        <a href="/a_view_inquiries">View Inquiries</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main_page">
+                <div class="header">
+                    <div class="outer_container">
+                        <div class="user_info_container">
+                            <img src="../static/user.png" alt="User Icon" width="70px" height="70px">
+                            <div class="welcome_container">
+                                <p class="user_welcome">{{ user.first_name }} {{ user.last_name }}</p>
+                            </div>
+                        </div>
+                        <div class="buttons_container">
+                            <a href="/a_edit_profile" class="button">Edit Profile</a>
+                            <a href="/logout" class="button">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_content">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

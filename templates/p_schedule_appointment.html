@@ -1,0 +1,44 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_index_styles.css">
+{% endblock %}
+{% block title %}
+    Schedule Appointment
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <p class="content_header">Available Appointments</p>
+        <div class="content">
+            <div class="left_bar"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Doctor</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Choice</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in range(number_of_free_slots) %}
+                        <tr>
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ doctors_list[i].first_name }} {{ doctors_list[i].last_name }}</td>
+                            <td>{{ free_slots_list[i].date }}</td>
+                            <td>{{ free_slots_list[i].start_time }} - {{ free_slots_list[i].end_time }}</td>
+                            <td>
+                                <form action="/p_schedule_appointment" method="post">
+                                    <input type="hidden" name="slot_id" value="{{free_slots_list[i].id}}">
+                                    <input type="hidden" name="user_id" value="{{user.id}}">
+                                    <input type="hidden" name="doctor_id" value="{{doctors_list[i].id}}">
+                                    <button class="button" type="submit">Choose</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

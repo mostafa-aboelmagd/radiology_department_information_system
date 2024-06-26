@@ -1,0 +1,48 @@
+.scan_card_container {
+    background-color: rgb(254,254,255);
+    height: max-content;
+    max-width: 900px;
+    box-shadow: 2px 2px 2px 2px rgba(160, 174, 167, 0.182);
+    z-index: 1;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scan_example {
+    background-color: rgb(227,233,240);
+}
+
+.scan_example p {
+    margin: 10px;
+    font-weight: 500;
+    color: black;
+}
+
+.instructions_title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.instructions_text {
+    margin: 10px;
+    font-weight: 500;
+}
+
+.instructions_text span {
+    font-weight: 850;
+}
+
+.instructions_container button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

@@ -1,0 +1,16 @@
+.accordion {
+    --bs-accordion-active-bg: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: rgb(25,147,213);
+}
+
+.accordion h2 {
+    margin-top: 10px;
+}
+
+.accordion-button:hover {
+    box-shadow: none;
+    transform: none;
+    scale: 1.005;
+    border: none;
+}

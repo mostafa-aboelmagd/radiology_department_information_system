@@ -1,0 +1,24 @@
+{% extends "d_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/d_index_styles.css">
+{% endblock %}
+{% block title %}
+    Main Page
+{% endblock %}
+{% block content %}
+    <p class="content_header">Status</p>
+    <div class="container text-center">
+            <div class="col">
+                <p>{{ number_of_busy_slots }}</p>
+                <p>Appointments</p>
+            </div>
+            <div class="col">
+                <p>{{ number_of_free_slots }}</p>
+                <p>Free Time Slots</p>
+            </div>
+            <div class="col">
+                <p>{{ treated_patients_num }}</p>
+                <p>Treated Patients</p>
+            </div>
+    </div>
+{% endblock %}

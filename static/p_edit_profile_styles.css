@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    background-color: rgb(227,233,240);
+}
+
+.container {
+    width: fit-content;
+    box-shadow: 3px 3px 2px 1px rgb(0, 0, 0, .2);
+}
+
+.col-md-8 {
+    width: 100%;
+}
+
+.profile-button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.home_message {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-color: rgb(25,147,213);
+}
+
+.profile-button {
+    background: rgb(25,147,213);
+    box-shadow: none;
+    border: none;
+}
+
+.profile-button:hover {
+    background: rgb(18, 108, 156);
+
+}
+
+.profile-button:focus {
+    background: rgb(18, 108, 156);
+    box-shadow: none;
+}
+
+.profile-button:active {
+    background: rgb(18, 108, 156);
+    box-shadow: none;
+}
+
+.back:hover {
+    color: rgb(18, 108, 156);
+    cursor: pointer;
+}

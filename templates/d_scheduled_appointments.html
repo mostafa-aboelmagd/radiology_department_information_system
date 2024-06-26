@@ -1,0 +1,35 @@
+{% extends "d_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/d_index_styles.css">
+{% endblock %}
+{% block title %}
+    Scheduled Appointments
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <p class="content_header">Your Upcoming Appointments</p>
+        <div class="content">
+            <div class="left_bar"></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Patient</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for i in range(appointments_count) %}
+                        <tr>
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ patients_list[i].first_name }} {{ patients_list[i].last_name }}</td>
+                            <td>{{ time_slots_list[i].date }}</td>
+                            <td>{{ time_slots_list[i].start_time }} - {{ time_slots_list[i].end_time }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

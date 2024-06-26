@@ -1,0 +1,30 @@
+{% extends "p_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/p_upload_scan_styles.css">
+{% endblock %}
+{% block title %}
+    Upload Scan
+{% endblock %}
+{% block content %}
+    <div class="scan_card_container">
+        <div class="scan_example">
+            <p>Doctor_ID: 1324</p>
+            <p>Date: 2024-08-06</p>
+            <p>Findings: disc_disease_and_mild_herniation</p>
+            <p>Cost: 200</p>
+            <p>Scan_Images: drive.google.com</p>
+        </div>
+        <div class="instructions_container">
+            <p class="instructions_title">Upload Scan Report Instructions</p>
+            <p class="instructions_text">Please make sure to upload the scan report in the <span>EXACT</span> format showcased (underscores separate multiple words like in findings, format of date is yyyy-mm--dd)</p>
+            <p class="instructions_text">The file must be in a <span>1 Page PDF</span> format so that the information can be processed correctly.</p>
+            <form action="/p_upload_scan" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input class="form-control" type="file" name="scan_file" required>
+                    <input type="hidden" name="user_id" value="{{user.id}}">
+                </div>
+                <button class="button" type="submit">Upload File</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

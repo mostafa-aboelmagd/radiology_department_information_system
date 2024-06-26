@@ -1,0 +1,34 @@
+{% extends "a_base.html" %}
+{% block css_link %}
+    <link rel="stylesheet" href="../static/a_doctors_styles.css">
+{% endblock %}
+{% block title %}
+    Doctors List
+{% endblock %}
+{% block content %}
+    <div class="content_container">
+        <div class="doctor_list">
+            {% for i in range(doctors_num) %}
+            <div class="doctor_item">
+                <div class="doctor_header">
+                    <h5>Doctor {{ i + 1}}</h5>
+                    <form action="/a_doctors" method="post">
+                        <input type="hidden" name="doctor_id" value="{{users_list[i].id}}">
+                        <button class="remove_button" type="submit">Remove</button>
+                    </form>
+                </div>
+                <div class="doctor_details">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Name:</strong> {{ users_list[i].first_name }} {{ users_list[i].last_name }}</p>
+                            <p><strong>Birth Date:</strong> {{ users_list[i].birth_date }}</p>
+                            <p><strong>Sex:</strong> {{ users_list[i].sex }}</p>
+                            <p><strong>Email:</strong> {{ users_list[i].email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+.add_button {
+    background-color: rgb(25,147,213);
+    color: rgb(254,254,255);
+    font-weight: bold;
+    min-width: 120px;
+    height: 35px;
+    border-style: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.add_button:hover {
+    scale: 1.05;
+    transition: 0.3s ease;
+}
+
+
+.date_container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.inner_container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 200px 300px;
+    align-items: center;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: rgb(25,147,213);
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.add_button {
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
