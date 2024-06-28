@@ -14,7 +14,7 @@ https://radiologyinformationsystem.pythonanywhere.com/
 - Introduces Inquriy System Between Patients And Adminstrators.
 
 ## Tech Stack Used
-- Front End: HTML - CSS - JavaScript
+- Front End: HTML - CSS & Bootstrap
 - Back End: Flask
 - Database: PostgreSQL
 
