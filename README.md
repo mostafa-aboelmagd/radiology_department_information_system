@@ -6,17 +6,19 @@ https://radiologyinformationsystem.pythonanywhere.com/
 
 ## Description
 
-- Project For Database Class In Cairo University Faculty Of Engineering, Systems and Biomedical Engineering Department.
-- Consists Of 3 Roles: Patient, Doctor, Adminstrator.
 - Facilitates An Online Appointment System Between Doctors And Patients.
+- Consists Of 3 Roles: Patient, Doctor, Adminstrator.
 - Enables Patients To Upload Radiology Scan Reports.
 - Allows Doctors To Input Free Time Slots Indicating Availablity For An Appointment.
 - Introduces Inquriy System Between Patients And Adminstrators.
 
 ## Tech Stack Used
-- Front End: HTML - CSS & Bootstrap
-- Back End: Flask
-- Database: PostgreSQL
+
+|**Front End** | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) |
+|--- | --- |
+|**Styling** | [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=fff)](#) |
+|**Back End** | [![Flask](https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff)](#) |
+|**Database** | [![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white)](#) |
 
 ## Features
 
@@ -61,11 +63,13 @@ https://radiologyinformationsystem.pythonanywhere.com/
 | ![alt text](<screenshots/patient_home (appointments).PNG>) |  ![alt text](screenshots/doctor_home.PNG) | ![alt text](screenshots/admin_home.PNG) |
 
 
-## Team Members
+## Contributors
 
-- Mostafa Ayman
-- Louai Khaled
-- Ali Younis
-- Adham Khaled
-- Ahmed Raafat
-- Zyad Wael
+| Name | GitHub | LinkedIn |
+| ---- | ------ | -------- |
+| Mostafa Ayman | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/mostafa-aboelmagd) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mostafa--aboelmagd/) |
+| Louai Khaled | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/louai111) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/louai-eleslamboly1/) |
+| Ali Younis | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-younis-98b780277/) |
+| Adham Khaled | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adham-mahran-b79b63244/) |
+| Ahmed Raafat | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/AhmeedRaafatt)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-raafat-engineer/) |
+| Zyad Wael | [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](#)| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](#) |
